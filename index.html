@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <h1>
+      Awsome Industries Inc
+    </h1>
+    <h4>
+      Cute Capcakes for BEST Besties
+    </h4>
+  </header>
+  <section>
+    <h2>
+      WELCOME
+    </h2>
+    <p>
+      VISION:To creat beautiful capcakes for client in the Randburg area.
+    </p><br><br>
+    <p>
+      ABOUT US:Founded in 2018, by Kaleb Mikiyas.
+      We Served above 100 client and delivered over 10,000 tasty treats. 
+    </p>
+  </section>
+  <section class="blue container">
+    <h2>
+      OUR SERVICES
+    </h2>
+    <div class="card">
+      <div class="icons">&#x1F60E;</div>
+      <h3>
+        Kaleb Mikiyas
+      </h3>
+      <p>
+        jnr. Web Developer creates beautiful websites for busines in Ethiopia
+      </p>
+      <button>
+        CONTACT
+      </button>
+    </div>
+    <div class="card">
+      <div class="icons">&#10084;</div>
+      <h3>
+        Eyasu Mikiyas
+      </h3>
+      <p>
+        jnr. Web Developer creates beautiful websites for busines in Ethiopia
+      </p>
+      <button>
+        CONTACT
+      </button>
+    </div>
+    <section class="blue container" style="background-color:deeppink ;">
+      <h2>
+        OUR TEAM
+      </h2>
+      <div class="card">
+        <div class="icons">&#x1F60E;</div>
+        <h3>
+          Kedus Getachew
+        </h3>
+        <p>
+          Best Cookies for you
+        </p>
+        
+      </div>
+      <div class="card">
+        <div class="icons">&#10084;</div>
+        <h3>
+          Abel Getachew
+        </h3>
+        <p>
+          Best Cookies for you
+        </p>
+        
+      </div>
+    </section>
+    
+  </section>
+  <section id="my-order">
+    <h2>
+      MY ORDER FROM:
+    </h2>
+    <form id="my-form">
+    <table>
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name="my-name" size="25"></td>
+      </tr>
+      <tr>
+        <td>ADDRESS:</td>
+        <td><input type="text" name="my-address" size="25"></td>
+      </tr>
+      <tr>
+        <td>Favorite drink</td>
+        <td>
+          <select name="my-drink">
+            <option value="">milk</option>
+            <option value="">Coffee</option>
+            <option value="">Tea</option>
+          </select>
+      </td>
+      </tr>
+      <tr>
+        <td>Quantity:</td>
+        <td>
+          <input type="number" name="my-qty" value="1" min="1" max="5">
+          <small>(max 5)</small>
+        </td>
+      </tr>
+      <tr>
+        <br>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <input type="button" 
+        value="Process Order" class="button" onclick="placeOrder();">
+          <input type="reset" value="clear" class="button" onclick="document.getElementById('my-order').style.display = 'none';">
+        </td>
+      </tr>
+    </table><br>
+    <div id="my-order">
+    </div>
+    </form>
+  </section>
+
+  <div class="footer">
+    <h3>
+    Thank you for visiting us
+  </h3>
+  <div class="container">
+    <article class="card">
+      <h3>Get in touch</h3>
+      <p>
+        We would love to hear from : Probably the best 
+        place to buy cupcakes in all 
+        of Joburg.
+      </p>
+    </article>
+    <article class="card">
+      <h3>
+        Contact Us 
+      </h3>
+      <p>
+        We would like to hear from <br>Call or email Us. <br>Mobile:072356 843 // Tel:012 343 3432
+      </p>
+    </article>
+  </div>
+  &copy;<b>2022 WEBKALEB</b> 
+  </div>
+  <script>
+    function placeOrder () {
+      var orderForm = document.getElementById("my-form");
+      results = "<h3>Success!</h3> Here is your order.";
+      results += "<br>Name: " + orderForm.elements["my-name"].value; 
+      results += "<br>Address: " + orderForm.elements["my-address"].value;
+      results += "<br>I like to order: " + orderForm.elements["my-drink"].value;
+      var orderResults =document.getElementById("my-order");
+      orderResults.style.display = "block";
+      orderResults.innerHTML = results;
+}
+  </script>
+</body>
+</html>
